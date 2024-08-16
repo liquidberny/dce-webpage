@@ -1,11 +1,13 @@
 import Hero from "./components/hero";
-import nextEvent from "./components/nextevent";
+import HotMerch from "./components/hotmerch";
+import NextEvent from "./components/nextevent";
 
 export default function Home() {
   return (
     <div>
       <Hero/>
-      {/* <nextEvent/> */}
+      <NextEvent/>
+      <HotMerch/>
     </div>
   );
 }
