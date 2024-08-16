@@ -8,7 +8,7 @@ function Nav() {
         <div className="logo">
             <Link href='/'>
                 <Image 
-                    className='nav-logo'
+                    className=''
                     src='/dce-logo-black.svg'
                     width={80}
                     height={80}
