@@ -1,16 +1,13 @@
 import React from "react";
 
-const nextEvent = () => {
+const NextEvent = () => {
   return (
-    <div
-      className="flex justify-center items-center"
-      style={{ height: "calc(100vh - 6rem)" }}
-    >
-      <div className="bg-gray-300 w-full h-full flex justify-center items-center text-2xl text-gray-800">
-        nextEvent
+    <div className="flex justify-center items-center h-screen bg-gray-100">
+      <div className="bg-gray-300 w-full h-full flex justify-center items-center text-2xl text-gray-800 border-4 border-black">
+        Next Event
       </div>
     </div>
   );
 };
 
-export default nextEvent;
+export default NextEvent;
