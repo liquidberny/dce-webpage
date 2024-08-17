@@ -1,17 +1,64 @@
+"use client";
 import React from "react";
+import Image from "next/image";
+import Autoplay from "embla-carousel-autoplay";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const Hero = () => {
+  const plugin = React.useRef(
+    Autoplay({ delay: 3000, stopOnInteraction: true })
+  );
   return (
-    <div
-      className="flex justify-center items-center"
-      style={{ height: "calc(100vh - 6rem)" }}
-    >
-      <div className="bg-gray-300 w-full h-full flex justify-center items-center text-2xl text-gray-800 border-4 border-black">
-        Hero
+    <div style={{ height: "calc(100vh - 6rem)" }} className="relative z-10">
+      <div className="bg-gray-300 w-full h-full flex justify-center items-center text-2xl text-gray-800 border-4 border-black ">
+        <Carousel
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+          plugins={[plugin.current]}
+          className="w-full max-w-xs"
+          onMouseEnter={plugin.current.stop}
+          onMouseLeave={plugin.current.reset}
+        >
+          <CarouselPrevious />
+          <CarouselContent>
+            <CarouselItem>
+              <Image
+                src="/images/1.jpg"
+                width={500}
+                height={500}
+                alt="Imagen 1"
+              />
+            </CarouselItem>
+            <CarouselItem>
+              <Image
+                src="/images/2.jpg"
+                width={500}
+                height={500}
+                alt="Imagen 2"
+              />
+            </CarouselItem>
+            <CarouselItem>
+              <Image
+                src="/images/3.jpg"
+                width={500}
+                height={500}
+                alt="Imagen 3"
+              />
+            </CarouselItem>
+          </CarouselContent>
+          <CarouselNext />
+        </Carousel>
       </div>
     </div>
   );
 };
 
 export default Hero;
-
