@@ -56,6 +56,9 @@ const Hero = () => {
           </CarouselContent>
           <CarouselNext />
         </Carousel>
+        <div className="bg-black w-[540px] h-[120px] absolute bottom-0 left-0 mb-4 ml-4 flex items-center justify-center text-white">
+          <h1>No te pierdas el siguiente evento</h1>
+        </div>
       </div>
     </div>
   );
