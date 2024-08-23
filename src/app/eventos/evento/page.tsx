@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-
+import Link from 'next/link'
 const Evento = () => {
   return (
     <div className="container mx-auto p-4">
@@ -27,9 +27,11 @@ const Evento = () => {
       </div>
 
       <div className="text-center mt-4">
-        <button className="bg-blue-500 text-white py-2 px-4 rounded">
+        <Link href="/eventos/evento/fotitos">
+          <button className="bg-pink-500 text-white py-2 px-4 rounded">
           VER TODAS LAS FOTOS DEL EVENTO &lt;333
-        </button>
+          </button>
+        </Link>
       </div>
 
       <div className="grid grid-cols-2 gap-4 mt-4">
