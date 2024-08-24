@@ -30,7 +30,7 @@ const EventCard: React.FC<EventCardProps> = ({ img, title, ubi, desc, date }) =>
                 <h4>{desc}</h4>
             </div>
             <div >
-                <Link className="flex bg-black text-white p-4 uppercase justify-center mt-4" href='/eventos'>Ver M&aacute;s</Link>
+                <Link className="flex bg-black text-white p-4 uppercase justify-center mt-4" href='/eventos/evento'>Ver M&aacute;s</Link>
             </div>
         </div>
     )
