@@ -1,6 +1,6 @@
 import Hero from "./components/hero";
 import HotMerch from "./components/Home/hotMerch";
-import NextEvent from "./components/nextEvent";
+import NextEvent from "./components/Home/nextEvent";
 
 export default function Home() {
   return (
