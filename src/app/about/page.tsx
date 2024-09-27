@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const ResponsiveOval = () => {
+const About = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen px-4">
       {/* Imagen ovalada responsiva */}
@@ -26,4 +26,4 @@ const ResponsiveOval = () => {
   );
 };
 
-export default ResponsiveOval;
+export default About;
