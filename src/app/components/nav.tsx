@@ -38,7 +38,7 @@ function Nav() {
           <Link href="/" className="hover:text-gray-600">
             Calendario
           </Link>
-          <Link href="/" className="hover:text-gray-600">
+          <Link href="/contacto" className="hover:text-gray-600">
             Contacto
           </Link>
         </div>
