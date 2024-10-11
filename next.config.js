@@ -14,6 +14,12 @@ module.exports = {
         port: '',
         pathname: '/**',
       },
+      {
+        protocol: 'http',
+        hostname: 'localhost',
+        port: '1337', // Puerto del servidor Strapi
+        pathname: '/**', // Permite todas las rutas
+      },
     ],
     dangerouslyAllowSVG: true, // Permite imágenes SVG
   },

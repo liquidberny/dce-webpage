@@ -1,5 +1,5 @@
 import React from "react";
-import MerchCard from "../MerchCard";
+import MerchCard from "@/components/MerchCard";
 import Link from "next/link";
 
 const HotMerch = () => {

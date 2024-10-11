@@ -1,5 +1,5 @@
 import React from 'react';
-import EventCard from '../components/Home/EventCard';
+import EventCard from '@/components/Home/EventCard';
 
 function Eventos() {
   return (
