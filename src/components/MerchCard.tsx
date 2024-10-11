@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Product } from '../interfaces';
+import { Product } from '@/interfaces';
 
 const MerchCard: React.FC<Product> = ({ id, documentId, images, name, price, sizes, description }) => {
     return (
