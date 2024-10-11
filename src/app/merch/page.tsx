@@ -22,6 +22,7 @@ function Merch() {
 
             return {
               id: item.id,
+              documentId: item.documentId,
               name: item.name || 'Unnamed',
               price: item.price || 0,
               description: item.description || 'No description',
@@ -44,12 +45,14 @@ function Merch() {
       <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {products.map((product) => (
           <MerchCard
+            id= {product.id}
+            documentId = {product.documentId}
             key={product.id}
-            img={product.images} // Aquí utilizamos la URL de la imagen
+            images={product.images} // Aquí utilizamos la URL de la imagen
             name={product.name}
-            price={`$${product.price}`}
+            price={product.price}
             sizes={['S', 'M', 'L', 'XL']} // Puedes ajustar esto dependiendo de tu producto
-            desc={product.description}
+            description={product.description}
           />
         ))}
       </div>
