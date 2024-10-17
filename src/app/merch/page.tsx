@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import MerchCard from '@/components/MerchCard';
 import { Product } from '@/interfaces';
-import { fetchMerch } from '@/utils/api';
+import { fetchMerch } from '@/utils';
 
 function Merch() {
   const [products, setProducts] = useState<Product[]>([]);
