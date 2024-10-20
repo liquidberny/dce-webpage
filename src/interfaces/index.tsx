@@ -1,2 +1,2 @@
-export * from './petInterface'
 export * from './merchInterface'
+export * from './eventInterface'

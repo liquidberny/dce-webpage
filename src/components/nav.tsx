@@ -27,7 +27,7 @@ function Nav() {
         </div>
         <div className="hidden md:flex gap-6">
           <Link href="/eventos" className="hover:text-gray-600">
-            Archivo
+            Eventos
           </Link>
           <Link href="/merch" className="hover:text-gray-600">
             Tienda
