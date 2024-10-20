@@ -1,10 +1,9 @@
 export interface Product {
-  id: number;
+  id: string;
   documentId:string;
   name: string;
   price: number;
   description: string;
   images: string;
-  sizes: string[];
-
+  sizes?: string[];
 }

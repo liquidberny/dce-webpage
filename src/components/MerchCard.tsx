@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Product } from '@/interfaces';
 
-const MerchCard: React.FC<Product> = ({ id, documentId, images, name, price, sizes, description }) => {
+const MerchCard: React.FC<Product> = ({ id, documentId, images, name, price, description }) => {
     return (
         <div className='border-2 border-black p-6 bg-white text-black flex flex-col justify-between shadow-lg'>
             <div>
@@ -16,7 +16,6 @@ const MerchCard: React.FC<Product> = ({ id, documentId, images, name, price, siz
                 />
                 <h2 className='font-bold uppercase text-2xl mb-2'>{name}</h2>
                 <p className='text-lg mb-2'>Precio: {price}</p>
-                <p className='mb-2'>Tallas disponibles: {sizes.join(', ')}</p>
                 <p>{description}</p>
             </div>
             <div>

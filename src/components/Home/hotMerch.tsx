@@ -1,8 +1,22 @@
-import React from "react";
+'use client'
+import React, { useState, useEffect } from "react";
 import MerchCard from "@/components/MerchCard";
 import Link from "next/link";
+import { fetchLastThreeProducts } from '@/utils';
+import { Product } from '@/interfaces';
 
 const HotMerch = () => {
+  const [products, setProducts] = useState<Product[]>([]);
+
+
+  useEffect(() => {
+    const getMerch = async () => {
+      const merchItems = await fetchLastThreeProducts();
+      setProducts(merchItems);
+    };
+    getMerch();
+  }, []);
+
   return (
     <div className="relative min-h-screen bg-gray-100">
       {/* Banner superior */}
@@ -20,27 +34,17 @@ const HotMerch = () => {
       <div className="flex flex-col justify-between w-full lg:min-h-screen bg-gray-300 border-4 border-black">
         {/* Grid adaptable con margen superior permanente */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-6 mt-16">
+        {products.map((product) => (
           <MerchCard
-            img="/images/camiseta.png"
-            name="Camiseta Logo DCE"
-            price="$25.00"
-            sizes={["S", "M", "L", "XL"]}
-            desc="Camiseta con el logo oficial del evento DCE. Algodón 100% de alta calidad."
+            id= {product.id}
+            documentId = {product.documentId}
+            key={product.id}
+            images={product.images} // Aquí utilizamos la URL de la imagen
+            name={product.name}
+            price={product.price}
+            description={product.description}
           />
-          <MerchCard
-            img="/images/gorra.png"
-            name="Gorra Edición Especial"
-            price="$15.00"
-            sizes={["Única"]}
-            desc="Gorra ajustable edición especial del evento. Disponible en color negro y blanco."
-          />
-          <MerchCard
-            img="/images/hoodie.png"
-            name="Hoodie Logo DCE"
-            price="$40.00"
-            sizes={["M", "L", "XL"]}
-            desc="Hoodie con el logo oficial del evento DCE. Mantente abrigado con estilo."
-          />
+        ))}
         </div>
 
         {/* Botón 'Ver catálogo completo' */}

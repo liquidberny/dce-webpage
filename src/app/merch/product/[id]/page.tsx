@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'next/navigation'; // Para obtener el id de la URL
 import Image from 'next/image';
-import { fetchProductById } from '@/utils/api'; 
+import { fetchProductById } from '@/utils'; 
 // Asegúrate de importar la función
 const Product = () => {
   const { id } = useParams();
