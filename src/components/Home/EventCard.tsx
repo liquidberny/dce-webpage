@@ -25,7 +25,7 @@ const EventCard: React.FC<Event> = ({ id, documentId, images, name, ubication, d
                 <p>{description}</p>
             </div>
             <div>
-                <Link className="flex bg-black text-white p-4 uppercase justify-center mt-4" href={`/eventos/evento/${documentId}`}>
+                <Link className="flex bg-black text-white p-4 uppercase justify-center mt-4" href={`/eventos/${documentId}`}>
                     Ver Más
                 </Link>
             </div>
