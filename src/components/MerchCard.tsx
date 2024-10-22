@@ -19,7 +19,7 @@ const MerchCard: React.FC<Product> = ({ id, documentId, images, name, price, des
                 <p>{description}</p>
             </div>
             <div>
-                <Link className="flex bg-black text-white p-4 uppercase justify-center mt-4" href={`/merch/product/${documentId}`}>
+                <Link className="flex bg-black text-white p-4 uppercase justify-center mt-4" href={`/merch/${documentId}`}>
                     Ver Producto
                 </Link>
             </div>

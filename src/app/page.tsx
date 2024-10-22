@@ -1,4 +1,4 @@
-import Hero from "@/components/hero";
+import Hero from "@/components/Home/hero";
 import HotMerch from "@/components/Home/hotMerch";
 import NextEvent from "@/components/Home/nextEvent";
 

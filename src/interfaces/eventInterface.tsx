@@ -8,4 +8,5 @@ export interface Event {
   date: string;
   time: string;
   ubication: string;
+  map: string;
 }
