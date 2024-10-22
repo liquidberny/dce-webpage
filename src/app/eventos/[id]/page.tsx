@@ -1,17 +1,16 @@
-'use client';
+"use client";
 
-import React, { useState, useEffect } from 'react';
-import { useParams } from 'next/navigation'; // Para obtener el id de la URL
-import Image from 'next/image'
-import Link from 'next/link'
-import { fetchEventById } from '@/utils/eventApi';
-import { Event } from '@/interfaces';
+import React, { useState, useEffect } from "react";
+import { useParams } from "next/navigation"; // Para obtener el id de la URL
+import Image from "next/image";
+import Link from "next/link";
+import { fetchEventById } from "@/utils/eventApi";
+import { Event } from "@/interfaces";
 
 const Evento = () => {
   const { id } = useParams();
   const [event, setEvent] = useState<Event>();
-  const [mainImage, setMainImage] = useState<string>(''); // Imagen principal
-
+  const [mainImage, setMainImage] = useState<string>(""); // Imagen principal
 
   useEffect(() => {
     const loadProduct = async () => {
@@ -35,31 +34,22 @@ const Evento = () => {
   return (
     <div className="container mx-auto p-4">
       <div className="bg-black text-white text-center p-2 capitalize">
-        <h1>{(event.name)}</h1>
+        <h1>{event.name}</h1>
       </div>
 
-      <div className="flex justify-between items-center mt-4">
-        <button className="p-2 text-2xl">{'<'}</button>
-
-        <div className="flex space-x-4">
-          <div className="bg-pink-200 w-40 h-40 flex items-center justify-center">
-            <Image src={mainImage} alt="Imagen 1" width={150} height={150} />
-          </div>
-          <div className="bg-pink-200 w-40 h-40 flex items-center justify-center">
-            <Image src={mainImage} alt="Imagen 2" width={150} height={150} />
-          </div>
-          <div className="bg-pink-200 w-40 h-40 flex items-center justify-center">
-            <Image src={mainImage} alt="Imagen 3" width={150} height={150} />
-          </div>
-        </div>
-
-        <button className="p-2 text-2xl">{'>'}</button>
+      <div className="flex justify-center items-center mt-4">
+        <Image
+          src={mainImage}
+          alt="Imagen principal"
+          width={150}
+          height={150}
+        />
       </div>
 
       <div className="text-center mt-4">
         <Link href="/eventos/evento/fotitos">
           <button className="bg-pink-500 text-white py-2 px-4 rounded">
-          VER TODAS LAS FOTOS DEL EVENTO &lt;333
+            VER TODAS LAS FOTOS DEL EVENTO &lt;333
           </button>
         </Link>
       </div>
@@ -73,7 +63,11 @@ const Evento = () => {
         <div className="bg-black text-white p-4">
           <h2 className="text-lg">Ubicación exacta:</h2>
           <p>{event.ubication}</p>
-          <Image src="/ruta/de/la/ubicacion.jpg" alt="Mapa de ubicación" width={300} height={200} />
+          <iframe
+            src={event.map}
+            width="400"
+            height="300"
+          ></iframe>
         </div>
 
         <div className="bg-black text-white p-4">
@@ -88,7 +82,7 @@ const Evento = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Evento
+export default Evento;

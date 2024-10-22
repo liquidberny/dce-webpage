@@ -12,7 +12,7 @@ function Nav() {
   };
 
   return (
-    <div className="bg-white border-black text-black p-6 sticky top-0 z-50">
+    <div className="bg-white text-black p-6 sticky top-0 z-50">
       <div className="flex items-center justify-between">
         <div className="logo">
           <Link href="/">

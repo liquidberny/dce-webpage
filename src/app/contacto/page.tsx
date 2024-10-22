@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Contacto = () => {
   return (
-    <div className="flex items-center justify-center min-h-screen px-4">
+    <div className="flex items-center justify-center w-full h-full px-4">
       {/* Logo ovalado */}
       <div className="flex items-center justify-center">
         <div className="w-48 h-48 flex items-center justify-center">

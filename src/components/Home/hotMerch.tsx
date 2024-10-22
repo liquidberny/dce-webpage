@@ -31,7 +31,7 @@ const HotMerch = () => {
       </div>
 
       {/* Contenedor principal */}
-      <div className="flex flex-col justify-between w-full lg:min-h-screen bg-gray-300 border-4 border-black">
+      <div className="flex flex-col justify-between w-full lg:min-h-screen bg-gray-300 border-4">
         {/* Grid adaptable con margen superior permanente */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-6 mt-16">
         {products.map((product) => (
