@@ -48,15 +48,19 @@ function Nav() {
           </button>
         </div>
       </div>
-      {isOpen && (
-        <div className="flex flex-col items-start mt-4 space-y-2 md:hidden">
+      <div
+        className={`overflow-hidden transition-all duration-300 ease-in-out md:hidden ${
+          isOpen ? "max-h-60 opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <div className="flex flex-col items-start mt-4 space-y-2">
           <Link href='/eventos' onClick={toggleMenu} className="hover:text-gray-600">Archivo</Link>
           <Link href='/merch' onClick={toggleMenu} className="hover:text-gray-600">Tienda</Link>
           <Link href='/about' onClick={toggleMenu} className="hover:text-gray-600">Nosotres</Link>
           <Link href='/' onClick={toggleMenu} className="hover:text-gray-600">Calendario</Link>
-          <Link href='/' onClick={toggleMenu} className="hover:text-gray-600">Contacto</Link>
+          <Link href='/contacto' onClick={toggleMenu} className="hover:text-gray-600">Contacto</Link>
         </div>
-      )}
+      </div>
     </div>
   );
 }

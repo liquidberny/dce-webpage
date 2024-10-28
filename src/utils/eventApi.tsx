@@ -12,8 +12,8 @@ export const fetchEvents = async () => {
       time: item.time,
       map: item.map,
       ubication: item.ubication|| 'missing',
-      images: item.images?.[0]?.formats?.thumbnail?.url 
-               ? `http://localhost:1337${item.images[0].formats.thumbnail.url}` 
+      images: item.images?.[0]?.formats?.medium?.url 
+               ? `http://localhost:1337${item.images[0].formats.medium.url}` 
                : '/default-image.jpg',
     }));
   }catch (error){
@@ -35,13 +35,13 @@ export const fetchEventById = async (id: string) => {
 
     // Obtener todas las imágenes en un array
     const images = item.images.map((img: any) => ({
-      thumbnail: `http://localhost:1337${img.formats.thumbnail.url}`,
+      medium: `http://localhost:1337${img.formats.medium.url}`,
       large: img.formats.large ? `http://localhost:1337${img.formats.large.url}` : null,
     }));
 
     // Obtener la imagen principal
-    const mainImage = item.images?.[0]?.formats?.thumbnail?.url
-      ? `http://localhost:1337${item.images[0].formats.thumbnail.url}`
+    const mainImage = item.images?.[0]?.formats?.medium?.url
+      ? `http://localhost:1337${item.images[0].formats.medium.url}`
       : '/default-image.jpg';
 
     return {
@@ -76,8 +76,8 @@ export const fetchLastThreeEvents = async () => {
       date: item.date,
       time: item.time,
       ubication: item.ubication|| 'missing',
-      images: item.images?.[0]?.formats?.thumbnail?.url 
-               ? `http://localhost:1337${item.images[0].formats.thumbnail.url}` 
+      images: item.images?.[0]?.formats?.large?.url 
+               ? `http://localhost:1337${item.images[0].formats.medium.url}` 
                : '/default-image.jpg',
     }));
   }catch (error){
@@ -102,8 +102,8 @@ console.log(item)
       time: item.time,
       map: item.map,
       ubication: item.ubication || 'missing',
-      images: item.images?.[0]?.formats?.thumbnail?.url
-        ? `http://localhost:1337${item.images[0].formats.thumbnail.url}`
+      images: item.images?.[0]?.formats?.medium?.url
+        ? `http://localhost:1337${item.images[0].formats.medium.url}`
         : '/default-image.jpg',
     };
   } catch (error) {
